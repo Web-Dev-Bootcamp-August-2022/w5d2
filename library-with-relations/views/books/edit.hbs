@@ -1,0 +1,15 @@
+<h1>Edit this book ✏️</h1>
+<form action="/books/edit/{{book._id}}" method="POST">
+	<label for="">Title: </label>
+	<input type="text" name="title" value="{{book.title}}">
+
+	<label for="">Author: </label>
+	<input type="text" name="author" value="{{book.author}}">
+
+	<label for="">Description: </label>
+	<input type="text" name="description" value="{{book.description}}">
+
+	<label for="">Rating: </label>
+	<input type="number" name="rating" value="{{book.rating}}">
+	<button type="sumbmit">Update</button>
+</form>

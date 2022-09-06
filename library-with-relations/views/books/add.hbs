@@ -1,0 +1,21 @@
+<h1>Add a book to the list</h1>
+<form action="/books" method="POST">
+	<label for="">Title: </label>
+	<input type="text" name="title">
+
+	<label for="">Author: </label>
+	{{!-- <input type="text" name="author"> --}}
+	<select name="author">
+		{{#each authors}}
+			<option value="{{_id}}">{{name}} {{lastName}}</option>
+		{{/each}}
+	</select>
+
+
+	<label for="">Description: </label>
+	<input type="text" name="description">
+
+	<label for="">Rating: </label>
+	<input type="number" name="rating">
+	<button type="sumbmit">Add this book</button>
+</form>
