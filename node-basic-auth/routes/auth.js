@@ -20,8 +20,9 @@ router.post('/signup', (req, res, next) => {
 	}
 	// validation passed
 	// check if the username is already used
-	User.find({ username: username })
+	User.findOne({ username: username })
 		.then(userFromDB => {
+			console.log(userFromDB)
 			if (userFromDB !== null) {
 				res.render('signup', { message: 'Your username is already taken' })
 			} else {
